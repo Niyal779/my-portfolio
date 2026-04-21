@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Niyal Rahaman — Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cosmos">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+  <canvas id="sc"></canvas>
+</div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" onclick="goTo('home')">
+      <div class="brand-photo">
+        <img src="Niyal.jpeg" alt="NR" onerror="this.style.display='none'">
+      </div>
+      <div class="brand-text-wrap">
+        <span class="brand-name">Niyal Rahaman</span>
+        <span class="brand-role">Software Engineer</span>
+      </div>
+    </a>
+    <nav class="nav-pills">
+      <button class="npill active" data-p="home"     onclick="goTo('home')">Home</button>
+      <button class="npill"        data-p="about"    onclick="goTo('about')">About</button>
+      <button class="npill"        data-p="skills"   onclick="goTo('skills')">Skills</button>
+      <button class="npill"        data-p="edu"      onclick="goTo('edu')">Education</button>
+      <button class="npill"        data-p="projects" onclick="goTo('projects')">Projects</button>
+      <button class="npill"        data-p="lang"     onclick="goTo('lang')">Languages</button>
+      <button class="npill"        data-p="contact"  onclick="goTo('contact')">Contact</button>
+    </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="npill" data-p="home"     onclick="goTo('home');closeMenu()">Home</button>
+    <button class="npill" data-p="about"    onclick="goTo('about');closeMenu()">About</button>
+    <button class="npill" data-p="skills"   onclick="goTo('skills');closeMenu()">Skills</button>
+    <button class="npill" data-p="edu"      onclick="goTo('edu');closeMenu()">Education</button>
+    <button class="npill" data-p="projects" onclick="goTo('projects');closeMenu()">Projects</button>
+    <button class="npill" data-p="lang"     onclick="goTo('lang');closeMenu()">Languages</button>
+    <button class="npill" data-p="contact"  onclick="goTo('contact');closeMenu()">Contact</button>
+  </div>
+</header>
+
+<!-- HOME -->
+<div class="pg active" id="pg-home">
+<div class="pinner">
+  <div class="home-left">
+    <div class="eyebrow reveal">Available for Opportunities</div>
+    <h1 class="headline" id="mainH" style="opacity:0">
+      <span class="bold">Niyal</span>
+      <span class="italic">Rahaman</span>
+    </h1>
+    <div class="tw-wrap reveal" style="transition-delay:.2s"><span id="tw"></span></div>
+    <p class="home-desc reveal" style="transition-delay:.36s">Aspiring full-stack developer passionate about building responsive, dynamic web applications and robust software systems. I turn ideas into real-world solutions through clean, meaningful code.</p>
+    <p class="roles reveal" style="transition-delay:.44s">Web Developer | Problem Solver | Full-Stack Learner | Open Source | CSE @ AIUB</p>
+    <div class="socials reveal" style="transition-delay:.5s">
+      <a href="https://www.facebook.com/niyalrahaman/" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a href="https://www.linkedin.com/in/niyal-rahaman-6611b3330/" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/Niyal779" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+      <a href="mailto:niyalrahaman23@gmail.com" class="soc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        Email
+      </a>
+      <a href="https://wa.me/8801306836841" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/niyal_rahaman/" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+    </div>
+    <div class="btn-row reveal" style="transition-delay:.58s">
+      <a href="tel:+8801306836841" class="btn-call">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now
+      </a>
+      <button class="btn-next" onclick="goTo('about')">About Me <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+  <div class="home-right reveal" style="transition-delay:.1s">
+    <div class="pframe">
+      <div class="pframe-border"></div>
+      <div class="pframe-inner"></div>
+      <div class="pframe-img">
+        <img src="Niyal.jpeg" alt="Niyal Rahaman" onerror="this.style.display='none';document.getElementById('ph-fb').style.display='flex'">
+        <div id="ph-fb" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;width:100%;height:100%;padding:2rem">
+          <div style="font-size:4rem">👨‍💻</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:center;line-height:1.7">Niyal Rahaman<br>Software Engineer</div>
+        </div>
+      </div>
+    </div>
+    <div class="pcaption">Niyal Rahaman<br>Software Engineer</div>
+  </div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="pg" id="pg-about">
+<div class="pinner">
+  <div class="eyebrow">02 — About Me</div>
+  <h2 class="ptitle">Who <em>I Am</em></h2>
+  <div class="about-hero anim-item">
+    <div class="about-hero-photo">
+      <img src="Niyall.jpg" alt="Niyal Rahaman" onerror="this.style.display='none'">
+    </div>
+    <div class="about-hero-text">
+      <h3>Niyal Rahaman</h3>
+      <p>Software Engineer · CSE @ AIUB · Dhaka, Bangladesh</p>
+    </div>
+  </div>
+  <div class="about-grid">
+    <div class="about-body">
+      <p>My name is <strong>Niyal Rahaman</strong>, and I am a passionate and driven Computer Science & Engineering student at <strong>American International University-Bangladesh (AIUB)</strong>. From a young age, I have been fascinated by how technology shapes the world — and that curiosity led me to pursue software engineering as my calling.</p>
+      <p>I specialize in <strong>full-stack web development</strong>, working with <strong>HTML, CSS, JavaScript, PHP, and MySQL</strong> to craft responsive, user-friendly digital experiences. Beyond the web, I have explored desktop application development in <strong>Java (GUI/Swing)</strong> and <strong>C# (.NET)</strong>, as well as system-level programming in <strong>C and C++</strong>.</p>
+      <div class="about-highlight">
+        " I believe great software is not just about writing code — it's about solving real problems with clarity, creativity, and craftsmanship. "
+      </div>
+      <p>My academic journey has given me a strong foundation in <strong>Data Structures, Algorithms, OOP, and Database Management</strong>. I have also explored the engineering side of technology through <strong>AutoCAD, MATLAB, Simulink</strong>, and <strong>Arduino-based embedded systems</strong> — which gives me a unique cross-disciplinary perspective.</p>
+      <p>I have built real-world projects ranging from a <strong>Product Management System in C#</strong>, an <strong>Online Jersey Shop in Java</strong>, to browser-based games in JavaScript. Each project has sharpened my problem-solving skills and deepened my understanding of software architecture.</p>
+    </div>
+    <div class="info-stack">
+      <div class="ii anim-item"><span class="ii-ico">🎓</span><div><div class="ii-lbl">University</div><div class="ii-v"><a href="https://www.facebook.com/aiub.edu" target="_blank">AIUB — American International University-Bangladesh ↗</a></div></div></div>
+      <div class="ii anim-item"><span class="ii-ico">💻</span><div><div class="ii-lbl">Department</div><div class="ii-v">Computer Science & Engineering (CSE)</div></div></div>
+      <div class="ii anim-item"><span class="ii-ico">📍</span><div><div class="ii-lbl">Address</div><div class="ii-v">House 36, Road 2, Block C, Bashundhara, Dhaka</div></div></div>
+      <div class="ii anim-item"><span class="ii-ico">📞</span><div><div class="ii-lbl">Phone / WhatsApp</div><div class="ii-v"><a href="tel:+8801306836841">+880 1306-836841</a></div></div></div>
+      <div class="ii anim-item"><span class="ii-ico">✉️</span><div><div class="ii-lbl">Email</div><div class="ii-v"><a href="mailto:niyalrahaman23@gmail.com">niyalrahaman23@gmail.com</a></div></div></div>
+      <div class="ii anim-item"><span class="ii-ico">🐙</span><div><div class="ii-lbl">GitHub</div><div class="ii-v"><a href="https://github.com/Niyal779" target="_blank">github.com/Niyal779 ↗</a></div></div></div>
+      <div class="ii anim-item"><span class="ii-ico">💼</span><div><div class="ii-lbl">LinkedIn</div><div class="ii-v"><a href="https://www.linkedin.com/in/niyal-rahaman-6611b3330/" target="_blank">niyal-rahaman ↗</a></div></div></div>
+    </div>
+  </div>
+  <div class="cert-box anim-item">
+    <div class="cert-box-title">✦ Focus Areas & Interests</div>
+    <div class="cert-item"><span class="cert-ico">🏆</span><div><div class="cert-name">Full-Stack Development</div><div class="cert-dept">Creating complete web applications from frontend to backend, using HTML, CSS, JavaScript, PHP, and MySQL for responsive and dynamic user experiences.</div></div></div>
+    <div class="cert-item"><span class="cert-ico">🎯</span><div><div class="cert-name">Software Engineering</div><div class="cert-dept">Applying OOP principles, design patterns, and best practices in languages like C# and Java to build scalable and maintainable software systems.</div></div></div>
+    <div class="cert-item"><span class="cert-ico">💡</span><div><div class="cert-name">Problem Solving & DSA</div><div class="cert-dept">Mastering algorithms, data structures, and logical thinking in C and C++ to solve complex computational problems efficiently.</div></div></div>
+    <div class="cert-item"><span class="cert-ico">🔧</span><div><div class="cert-name">Engineering Tools</div><div class="cert-dept">Utilizing AutoCAD for design, MATLAB and Simulink for simulations, enhancing technical skills beyond traditional programming.</div></div></div>
+    <div class="cert-item"><span class="cert-ico">🤖</span><div><div class="cert-name">Embedded Systems</div><div class="cert-dept">Working with Arduino and IoT hardware to develop interactive projects, bridging software with physical devices.</div></div></div>
+    <div class="cert-item"><span class="cert-ico">🎮</span><div><div class="cert-name">Game Dev & GUI Apps</div><div class="cert-dept">Developing games and graphical user interfaces using HTML Canvas, JavaScript, and Java Swing for engaging user interactions.</div></div></div>
+    <div class="cert-item"><span class="cert-ico">🌟</span><div><div class="cert-name">Open Source</div><div class="cert-dept">Contributing to open-source projects on GitHub, collaborating with global developers to improve and share code.</div></div></div>
+  </div>
+  <div class="btn-row">
+    <button class="btn-back" onclick="goTo('home')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+    <button class="btn-next" onclick="goTo('skills')">My Skills <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="pg" id="pg-skills">
+<div class="pinner">
+  <div class="eyebrow">03 — Skills</div>
+  <h2 class="ptitle">Technical <em>Expertise</em></h2>
+  <div class="sk-layout">
+    <div>
+      <div class="sk-group-title">Core Technologies</div>
+      <div class="sk-grid">
+        <div class="sk anim-item"><div class="sk-ico">🌐</div><h3>Web Frontend</h3><div class="sk-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">⚙️</div><h3>Backend / DB</h3><div class="sk-tags"><span class="tag">PHP</span><span class="tag">MySQL</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">💻</div><h3>Programming</h3><div class="sk-tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">Java</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">🧩</div><h3>CS Theory</h3><div class="sk-tags"><span class="tag">Algorithms</span><span class="tag">Data Structures</span><span class="tag">OOP</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">🔧</div><h3>Engineering</h3><div class="sk-tags"><span class="tag">AutoCAD</span><span class="tag">MATLAB</span><span class="tag">Simulink</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">🤖</div><h3>Embedded / IoT</h3><div class="sk-tags"><span class="tag">Arduino</span><span class="tag">Sensors</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">🗃️</div><h3>Database</h3><div class="sk-tags"><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">DBMS</span></div></div>
+        <div class="sk anim-item"><div class="sk-ico">🛠️</div><h3>Dev Tools</h3><div class="sk-tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">IntelliJ</span></div></div>
+      </div>
+    </div>
+    <div class="prof-panel anim-item">
+      <div class="sk-group-title">Proficiency Levels</div>
+      <div class="prog-item"><div class="prog-top"><span>HTML / CSS</span><span>92%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".92"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>JavaScript</span><span>78%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".78"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>PHP / MySQL</span><span>74%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".74"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>Java</span><span>70%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".70"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>C / C++</span><span>68%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".68"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>C#</span><span>65%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".65"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>Algorithms / DSA</span><span>72%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".72"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>AutoCAD</span><span>60%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".60"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>MATLAB / Simulink</span><span>55%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".55"></div></div></div>
+      <div class="prog-item"><div class="prog-top"><span>Arduino</span><span>62%</span></div><div class="prog-bar"><div class="prog-fill" data-w=".62"></div></div></div>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn-back" onclick="goTo('about')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+    <button class="btn-next" onclick="goTo('edu')">Education <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</div>
+</div>
+
+<!-- EDUCATION -->
+<div class="pg" id="pg-edu">
+<div class="pinner">
+  <div class="eyebrow">04 — Education</div>
+  <h2 class="ptitle">Academic <em>Journey</em></h2>
+  <div class="edu-layout">
+    <div class="edu-line">
+      <div class="edu-card anim-item">
+        <div class="edu-dot"></div>
+        <div class="edu-img"><img src="aiub.jpg" alt="AIUB" onerror="this.style.display='none'"></div>
+        <div class="edu-yr">2023 — Present</div>
+        <div class="edu-title">B.Sc. Computer Science & Engineering</div>
+        <div class="edu-place"><a href="https://www.facebook.com/aiub.edu" target="_blank">American International University-Bangladesh (AIUB) ↗</a></div>
+        <div class="edu-sub">CSE Department · Dhaka, Bangladesh</div>
+      </div>
+      <div class="edu-card anim-item">
+        <div class="edu-dot"></div>
+        <div class="edu-img"><img src="college.jpg" alt="Dularhat Adarsha College" onerror="this.style.display='none'"></div>
+        <div class="edu-yr">HSC</div>
+        <div class="edu-title">Higher Secondary Certificate</div>
+        <div class="edu-place"><span>Dularhat Adarsha College</span></div>
+        <div class="edu-sub">Science Group · Dularhat, Bangladesh</div>
+      </div>
+      <div class="edu-card anim-item">
+        <div class="edu-dot"></div>
+        <div class="edu-img"><img src="school.jpg" alt="Dularhat Secondary School" onerror="this.style.display='none'"></div>
+        <div class="edu-yr">SSC</div>
+        <div class="edu-title">Secondary School Certificate</div>
+        <div class="edu-place"><span>Dularhat Secondary School</span></div>
+        <div class="edu-sub">Science Group · Dularhat, Bangladesh</div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn-back" onclick="goTo('skills')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+    <button class="btn-next" onclick="goTo('projects')">Projects <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="pg" id="pg-projects">
+<div class="pinner">
+  <div class="eyebrow">05 — Projects</div>
+  <h2 class="ptitle">What I've <em>Built</em></h2>
+  <div class="proj-grid">
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 01</div><div class="proj-icon">📦</div>
+      <div class="proj-title">Product Management System</div>
+      <p class="proj-desc">Desktop application for managing product inventory — add, update, delete product records with a clean UI and SQL Server database integration.</p>
+      <div class="proj-stack"><span class="p-tag cs">C#</span><span class="p-tag cs">.NET</span><span class="p-tag cs">Windows Forms</span><span class="p-tag cs">SQL Server</span></div>
+    </div>
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 02</div><div class="proj-icon">🏆</div>
+      <div class="proj-title">Online Jersey Shop Management</div>
+      <p class="proj-desc">Full-featured jersey shop management with customer ordering, cart, admin panel, and inventory control with a polished Java GUI.</p>
+      <div class="proj-stack"><span class="p-tag java">Java</span><span class="p-tag java">Java Swing</span><span class="p-tag java">MySQL</span><span class="p-tag java">JDBC</span></div>
+    </div>
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 03</div><div class="proj-icon">✈️</div>
+      <div class="proj-title">Airport Design System</div>
+      <p class="proj-desc">GUI-based airport management simulation — flight scheduling, gate management, and visual airport layout interface built with Java Swing.</p>
+      <div class="proj-stack"><span class="p-tag java">Java</span><span class="p-tag java">GUI Swing</span><span class="p-tag java">OOP</span></div>
+    </div>
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 04</div><div class="proj-icon">🎮</div>
+      <div class="proj-title">Tic Tac Toe Game</div>
+      <p class="proj-desc">Polished browser-based Tic Tac Toe with player vs player mode, win detection, score tracking and smooth animations.</p>
+      <div class="proj-stack"><span class="p-tag web">HTML</span><span class="p-tag web">CSS3</span><span class="p-tag web">JavaScript</span></div>
+    </div>
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 05</div><div class="proj-icon">💼</div>
+      <div class="proj-title">Client Portfolio Website</div>
+      <p class="proj-desc">Professional portfolio website built for a client — responsive design, smooth navigation, project showcase, and contact section.</p>
+      <div class="proj-stack"><span class="p-tag web">HTML</span><span class="p-tag web">CSS3</span><span class="p-tag web">JavaScript</span></div>
+    </div>
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 06</div><div class="proj-icon">🧮</div>
+      <div class="proj-title">Scientific Calculator</div>
+      <p class="proj-desc">Fully functional calculator with standard and scientific operations, keyboard support, history log, and a sleek modern UI design.</p>
+      <div class="proj-stack"><span class="p-tag web">HTML</span><span class="p-tag web">CSS3</span><span class="p-tag web">JavaScript</span></div>
+    </div>
+    <div class="proj-card anim-item">
+      <div class="proj-num">PROJECT 07</div><div class="proj-icon">🐍</div>
+      <div class="proj-title">Snake Game</div>
+      <p class="proj-desc">Classic Snake game with HTML Canvas — growing snake mechanics, food spawning, speed scaling, and high score tracking in the browser.</p>
+      <div class="proj-stack"><span class="p-tag web">HTML</span><span class="p-tag web">CSS3</span><span class="p-tag web">JavaScript</span><span class="p-tag web">Canvas API</span></div>
+    </div>
+  </div>
+  <div class="gh-banner anim-item">
+    <div class="gh-banner-text">
+      <h4>More projects available on GitHub</h4>
+      <p>Explore all repositories — source code, demos and more open-source work</p>
+    </div>
+    <a href="https://github.com/Niyal779" target="_blank" class="gh-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      View All on GitHub ↗
+    </a>
+  </div>
+  <div class="btn-row">
+    <button class="btn-back" onclick="goTo('edu')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+    <button class="btn-next" onclick="goTo('lang')">Languages <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</div>
+</div>
+
+<!-- LANGUAGES -->
+<div class="pg" id="pg-lang">
+<div class="pinner">
+  <div class="eyebrow">06 — Languages</div>
+  <h2 class="ptitle">Languages I <em>Speak</em></h2>
+  <div class="lang-grid">
+    <div class="lang-card anim-item">
+      
+      <div class="lang-name">বাংলা</div>
+      <div class="lang-level">Native · Mother Tongue · 100%</div>
+      <div class="lang-bar-wrap"><div class="lang-bar" style="background:linear-gradient(90deg,var(--accent),var(--accent2))"></div></div>
+      <div class="lang-desc">আমার মাতৃভাষা। বাংলায় আমি সাবলীলভাবে কথা বলি, পড়ি এবং লিখি।<br><br>My first language. I speak, read and write Bengali with full native fluency — personally, academically and professionally.</div>
+    </div>
+    <div class="lang-card anim-item">
+      
+      <div class="lang-name">English</div>
+      <div class="lang-level">Professional · Academic · 82%</div>
+      <div class="lang-bar-wrap"><div class="lang-bar" style="background:linear-gradient(90deg,var(--blue),var(--green));width:82%"></div></div>
+      <div class="lang-desc">Strong proficiency in reading, writing and communication. Used daily in academics, coding documentation, technical writing and professional interaction.</div>
+    </div>
+    <div class="lang-card anim-item">
+      <div class="lang-name">हिन्दी</div>
+      <div class="lang-level">Conversational · 55%</div>
+      <div class="lang-bar-wrap"><div class="lang-bar" style="background:linear-gradient(90deg,var(--gold),var(--accent2));width:55%"></div></div>
+      <div class="lang-desc">Comfortable in everyday conversations. Can understand and communicate in Hindi through cultural exposure, media and social interaction.</div>
+    </div>
+  </div>
+  <div class="btn-row">
+    <button class="btn-back" onclick="goTo('projects')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+    <button class="btn-next" onclick="goTo('contact')">Contact Me <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="pg" id="pg-contact">
+<div class="pinner">
+  <div class="eyebrow">07 — Contact</div>
+  <h2 class="ptitle">Let's <em>Connect</em></h2>
+  <div class="contact-layout">
+    <div>
+      <p class="contact-intro">I'm always open to discussing new opportunities, collaborations, or just a great conversation about technology. Reach out through any channel below!</p>
+      <div class="c-grid">
+        <a href="https://www.facebook.com/niyalrahaman/" target="_blank" class="clink anim-item"><span class="ci">📘</span><div><span class="cl">Facebook</span><span class="cv">niyalrahaman</span></div></a>
+        <a href="https://www.linkedin.com/in/niyal-rahaman-6611b3330/" target="_blank" class="clink anim-item"><span class="ci">💼</span><div><span class="cl">LinkedIn</span><span class="cv">niyal-rahaman</span></div></a>
+        <a href="https://github.com/Niyal779" target="_blank" class="clink anim-item"><span class="ci">🐙</span><div><span class="cl">GitHub</span><span class="cv">Niyal779</span></div></a>
+        <a href="https://www.instagram.com/niyal_rahaman/" target="_blank" class="clink anim-item"><span class="ci">📷</span><div><span class="cl">Instagram</span><span class="cv">niyal_rahaman</span></div></a>
+        <a href="mailto:niyalrahaman23@gmail.com" class="clink anim-item"><span class="ci">✉️</span><div><span class="cl">Email</span><span class="cv">niyalrahaman23@gmail.com</span></div></a>
+        <a href="https://wa.me/8801306836841" target="_blank" class="clink anim-item"><span class="ci">💬</span><div><span class="cl">WhatsApp</span><span class="cv">+880 1306-836841</span></div></a>
+        <a href="tel:+8801306836841" class="clink anim-item"><span class="ci">📞</span><div><span class="cl">Phone</span><span class="cv">+880 1306-836841</span></div></a>
+        <div class="clink static anim-item"><span class="ci">📍</span><div><span class="cl">Location</span><span class="cv">Block C, Bashundhara, Dhaka</span></div></div>
+        <div class="clink static anim-item"><span class="ci">🎓</span><div><span class="cl">University</span><span class="cv">AIUB — CSE Dept.</span></div></div>
+      </div>
+      <div class="btn-row" style="margin-top:1.4rem">
+        <a href="tel:+8801306836841" class="btn-call">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call Now
+        </a>
+        <button class="btn-back" onclick="goTo('lang')"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+        <button class="btn-next" onclick="goTo('home')">Back to Home <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="cta-box anim-item">
+        <h3>Ready to collaborate?</h3>
+        <p>Looking for internship opportunities and exciting projects. Let's build something great together!</p>
+        <a href="mailto:niyalrahaman23@gmail.com" class="cta-btn">✉️ Send an Email</a>
+      </div>
+      <div class="qform anim-item">
+        <div class="qform-title">Quick Message</div>
+        <div class="qform-note">⚠ This form is for frontend design only. For GitHub Pages, it will not send messages unless you connect it to a form service (e.g. Formspree, EmailJS).</div>
+        <div class="qform-row">
+          <input type="text" placeholder="Your Name" id="qname">
+          <input type="email" placeholder="Your Email" id="qemail">
+        </div>
+        <input type="text" placeholder="Subject" id="qsubject">
+        <textarea placeholder="Your message..." id="qmsg"></textarea>
+        <button class="qform-btn" onclick="submitForm()">Send Message →</button>
+        <div id="qsuccess" style="display:none;margin-top:.7rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--green);letter-spacing:.08em">✓ Message noted! Connect a backend to enable real sending.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-grand">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-sig-name">Niyal Rahaman</span>
+        <span class="footer-sig-title">Software Engineer</span>
+      </div>
+      <div class="footer-center-el">
+        <div class="footer-glow-dot"></div>
+      </div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/niyalrahaman/" target="_blank" class="f-link">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Follow on Facebook
+        </a>
+        <a href="https://github.com/Niyal779" target="_blank" class="f-link">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub Profile
+        </a>
+        <a href="https://www.instagram.com/niyal_rahaman/" target="_blank" class="f-link">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Follow on Instagram
+        </a>
+        <a href="mailto:niyalrahaman23@gmail.com" class="f-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          Send Email
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Designed & Developed by <a href="https://www.facebook.com/niyalrahaman/" target="_blank">Niyal Rahaman</a></div>
+      <div class="footer-rights">© 2026 Niyal Rahaman. All rights reserved.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
